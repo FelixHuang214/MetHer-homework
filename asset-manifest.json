@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/MetHer-homework/static/css/main.d33dd536.css",
+    "main.js": "/MetHer-homework/static/js/main.8acd8d54.js",
+    "static/media/bg-success.png": "/MetHer-homework/static/media/bg-success.cf2b98bf39e3f6e4e08d.png",
+    "static/media/bg.png": "/MetHer-homework/static/media/bg.20892a637061159f0840.png",
+    "static/media/group.png": "/MetHer-homework/static/media/group.be12f35e409e1fd406b0.png",
+    "index.html": "/MetHer-homework/index.html",
+    "main.d33dd536.css.map": "/MetHer-homework/static/css/main.d33dd536.css.map",
+    "main.8acd8d54.js.map": "/MetHer-homework/static/js/main.8acd8d54.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d33dd536.css",
+    "static/js/main.8acd8d54.js"
+  ]
+}
