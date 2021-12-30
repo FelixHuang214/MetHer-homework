@@ -7,8 +7,10 @@ import SendEmailPage from "./pages/SendEmailPage";
 import SignupPage from "./pages/SignupPage";
 import VerifyPage from "./pages/VerifyPage";
 import SignupConfirm from "./pages/SignupConfirm";
+import LoginSuccessPage from "./pages/LoginSuccessPage";
 
 import bg from "./images/bg.png";
+import bgSuccess from "./images/bg-success.png";
 
 const Container = styled.div`
   position: relative;
@@ -27,8 +29,8 @@ function App() {
     <>
       <GlobalStyle />
       <Container>
-        <Bg src={bg} />
-        <SignupConfirm />
+        <Bg src={bgSuccess} />
+        <LoginSuccessPage />
       </Container>
     </>
   );
