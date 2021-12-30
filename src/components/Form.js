@@ -1,8 +1,6 @@
 import styled from "styled-components";
 import { useState } from "react";
-import { TextField } from "@mui/material";
-import { Button } from "@mui/material";
-import { Box } from "@mui/material";
+import { TextField, Box, Button } from "@mui/material";
 import { dropSymbolAndLowerCase } from "../utils";
 
 const CustomizedTextField = styled(TextField)`
