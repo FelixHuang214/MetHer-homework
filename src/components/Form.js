@@ -50,7 +50,7 @@ const CustomizedBox = styled(Box)`
   }
 `;
 
-const Form = ({ footer = false, elementsData }) => {
+const Form = ({ footer = false, elementsData, page, setPage, setEmail }) => {
   const [inputValue, setInputValue] = useState(() => {
     const initialError = {};
     elementsData.input.reduce((obj, data) => {
@@ -88,6 +88,14 @@ const Form = ({ footer = false, elementsData }) => {
         tmpErrorMessage[key] = checkEmail(keyValue)
           ? tmpErrorMessage[key]
           : `${newKey} is incorrect`;
+      }
+      if (
+        key === "email" &&
+        page === "sendEmail" &&
+        !tmpErrorMessage["email"]
+      ) {
+        setEmail(keyValue);
+        setPage("verify");
       }
     });
     setErrorMessage(tmpErrorMessage);
@@ -128,8 +136,12 @@ const Form = ({ footer = false, elementsData }) => {
         {elementsData.button}
       </CustomizedButton>
       <Footer footer={footer}>
-        <a href="#">Forgot password?</a>
-        <a href="#">Sign Up</a>
+        <a href="#" onClick={() => setPage("sendEmail")}>
+          Forgot password?
+        </a>
+        <a href="#" onClick={() => setPage("signup")}>
+          Sign Up
+        </a>
       </Footer>
     </CustomizedBox>
   );

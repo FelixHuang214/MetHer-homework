@@ -1,6 +1,6 @@
 import Form from "../components/Form";
 
-const LoginPage = () => {
+const LoginPage = ({ page, setPage }) => {
   return (
     <Form
       name="login"
@@ -13,6 +13,8 @@ const LoginPage = () => {
         button: "LOGIN",
       }}
       footer={true}
+      setPage={setPage}
+      page={page}
     />
   );
 };

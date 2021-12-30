@@ -1,6 +1,6 @@
 import Form from "../components/Form";
 
-const SignupPage = () => {
+const SignupPage = ({ page }) => {
   return (
     <Form
       name="signup"
@@ -14,6 +14,7 @@ const SignupPage = () => {
         ],
         button: "SIGNUP",
       }}
+      page={page}
     />
   );
 };
