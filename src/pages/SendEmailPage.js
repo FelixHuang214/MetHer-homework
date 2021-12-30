@@ -1,6 +1,6 @@
 import Form from "../components/Form";
 
-const SendEmailPage = () => {
+const SendEmailPage = ({ setEmail, page, setPage }) => {
   return (
     <Form
       name="sendEmail"
@@ -9,6 +9,9 @@ const SendEmailPage = () => {
         input: [{ name: "email", label: "E-mail" }],
         button: "SEND",
       }}
+      setEmail={setEmail}
+      setPage={setPage}
+      page={page}
     />
   );
 };

@@ -94,7 +94,7 @@ const ErrorMessage = styled.div`
 
 const initInputValue = () => [...Array(6)].map(() => "");
 
-const VerifyPage = () => {
+const VerifyPage = ({ email }) => {
   const [inputValue, setInputValue] = useState(() => initInputValue());
   const [errorMessage, setErrorMessage] = useState("");
   const inputsRef = useRef([]);
@@ -160,16 +160,16 @@ const VerifyPage = () => {
       <div>
         {inputValue.map((value, index) => (
           <CustomizedFilledInput
-            isError={errorMessage}
+            // isError={errorMessage}
             key={index}
             hiddenLabel
             id="component-filled"
             value={value}
-            readOnly={value ? "readonly" : false}
             inputRef={(el) => (inputsRef.current[index] = el)}
             onChange={(e) => handleChangeValue(e, index)}
             inputProps={{
               maxLength: 1,
+              readOnly: value ? "readonly" : null,
               onKeyUp(e) {
                 handleKeyUp(e, index);
               },
@@ -178,7 +178,7 @@ const VerifyPage = () => {
         ))}
       </div>
       <DetailBlock>
-        <Desc>Please enter 6 digital code sent to XXX@gmail.com</Desc>
+        <Desc>Please enter 6 digital code sent to {email}</Desc>
         <Timer>{timer}s</Timer>
       </DetailBlock>
       <ButtonBlock>
