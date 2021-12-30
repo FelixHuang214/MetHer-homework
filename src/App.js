@@ -1,10 +1,12 @@
 import styled from "styled-components";
 
+import GlobalStyle from "./globalStyle";
 import Form from "./components/Form";
 import LoginPage from "./pages/LoginPage";
 import SendEmailPage from "./pages/SendEmailPage";
 import SignupPage from "./pages/SignupPage";
 import VerifyPage from "./pages/VerifyPage";
+import SignupConfirm from "./pages/SignupConfirm";
 
 import bg from "./images/bg.png";
 
@@ -22,10 +24,13 @@ const Bg = styled.img`
 
 function App() {
   return (
-    <Container>
-      <Bg src={bg} />
-      <VerifyPage />
-    </Container>
+    <>
+      <GlobalStyle />
+      <Container>
+        <Bg src={bg} />
+        <SignupConfirm />
+      </Container>
+    </>
   );
 }
 
